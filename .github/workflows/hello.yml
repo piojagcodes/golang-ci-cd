@@ -8,5 +8,7 @@ jobs:
   Hello:
     runs-on: ubuntu-18.04
     steps:
+      - name: Checkout
+      - uses: actions/checkout@v3
       - name: Hello World!
         run: echo "Hello World!"
