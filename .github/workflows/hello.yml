@@ -1,5 +1,5 @@
 name: hello world
-
+description: hello world
 on: 
   push:
     branches:
@@ -8,7 +8,8 @@ jobs:
   Hello:
     runs-on: ubuntu-18.04
     steps:
-      - name: Checkout
-      - uses: actions/checkout@v3
+      - run: go run main.go  # Run the go program
+      - shell: bash           # Use bash shell
+      - uses: actions/checkout@v3  # Checkout code from the repository
       - name: Hello World!
-        run: echo "Hello World!"
+        run: echo "Hello World!"  # Print "Hello World!"
